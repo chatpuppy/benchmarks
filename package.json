@@ -1,0 +1,23 @@
+{
+  "name": "benchmarks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "benchmark": "^2.1.4",
+    "buffer": "^6.0.3",
+    "crypto": "^1.0.1",
+    "global": "^4.4.0",
+    "js-nacl": "^1.4.0",
+    "libsodium": "^0.7.10",
+    "node-gyp": "^9.3.0",
+    "sodium": "^3.0.2",
+    "tweetnacl": "^1.0.3"
+  }
+}
