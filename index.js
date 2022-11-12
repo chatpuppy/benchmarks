@@ -62,44 +62,11 @@ class test_tweetnacl {
 			this._pubkey,
 			ephemeralKeyPair.secretKey,
 		);
+		// console.log(encryptedMessage);
 	}
 }
 
-function encrypt ({
-	publicKey,
-	data,
-	version,
-}) {
-	if (isNullish(publicKey)) {
-    throw new Error('Missing publicKey parameter');
-  } else if (isNullish(data)) {
-    throw new Error('Missing data parameter');
-  } else if (isNullish(version)) {
-    throw new Error('Missing version parameter');
-  }
-	switch (version) {
-    case 'x25519-xsalsa20-poly1305': {
-			if (typeof data !== 'string') {
-        throw new Error('Message data must be given as a string');
-      }
-			let pubKeyUInt8Array;
-      try {
-        pubKeyUInt8Array = base64_to_Uint8Array(publicKey); 
-      } catch (err) {
-        throw new Error('Bad public key');
-      }
-
-			const msgParamsUInt8Array = string_to_Uint8Array(data);
-
-
-
-		}
-		default:
-      throw new Error('Encryption type/version not supported');
-  }
-}
 /*********************** Sodium tests ***************************/
-
 class test_sodium {
 	constructor() {
 		this._seed = base64_to_Uint8Array(_seed);
@@ -141,6 +108,7 @@ class test_sodium {
 			this.pubkey_,
 			ephemeralKeyPair.secretKey,
 		);
+		// console.log(encryptedMessage);
 	}
 }
 
